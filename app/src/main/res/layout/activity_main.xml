@@ -9,14 +9,17 @@
     android:padding="24dp">
 
     <!-- Логотип -->
+
+    <!-- Название приложения -->
     <ImageView
+        android:id="@+id/MetalLogo"
         android:layout_width="70dp"
         android:layout_height="60dp"
         android:layout_gravity="center_horizontal"
         android:src="@drawable/metal_logo" />
 
-    <!-- Название приложения -->
     <TextView
+        android:id="@+id/MetalAppName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -28,6 +31,7 @@
 
     <!-- Подзаголовок -->
     <TextView
+        android:id="@+id/MetalDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
