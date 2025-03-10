@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         etPhone = findViewById(R.id.et_phone)
         etPassword = findViewById(R.id.et_password)
         btnLogin = findViewById(R.id.btn_login)
-        btnRegister = findViewById(R.id.btn_register)
+        btnRegister = findViewById(R.id.btn_edit)
         tvLoginStatus = findViewById(R.id.tv_login_status)
 
         btnLogin.setOnClickListener {
