@@ -40,14 +40,15 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
             android:fontFamily="@font/inter_bold"
             android:text="Metal"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.19"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.511" />
 
@@ -154,11 +155,11 @@
 
         <Button
             android:id="@+id/btn_edit"
-            android:textAllCaps="false"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             android:text="Edit"
+            android:textAllCaps="false"
             android:textColor="#EFB0EF"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -282,11 +283,11 @@
 
         <Button
             android:id="@+id/btn_edit3"
-            android:textAllCaps="false"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             android:text="Edit"
+            android:textAllCaps="false"
             android:textColor="#EFB0EF"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -389,8 +390,8 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="20dp"
         android:text="Metal for Android v11.7.3 (5696) store bundled arm64-v8a"
-        android:textColor="#C8C8C8"
         android:textAlignment="center"
+        android:textColor="#C8C8C8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
