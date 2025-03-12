@@ -47,11 +47,13 @@
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/imageView3"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.511" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <!-- Phone container -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/profile_banner"
         android:layout_width="0dp"
@@ -59,8 +61,10 @@
         android:background="@drawable/banner"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header">
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:layout_constraintVertical_bias="0.0">
 
         <ImageView
             android:id="@+id/profile_image"
@@ -97,11 +101,14 @@
             android:textSize="10sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.301"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_username" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_username"
+            app:layout_constraintVertical_bias="0.117" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Phone container -->
+    <!-- Username container -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/phone_container"
         android:layout_width="0dp"
@@ -112,8 +119,10 @@
         android:background="@drawable/rounded_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_banner">
+        app:layout_constraintTop_toBottomOf="@+id/profile_banner"
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:id="@+id/tv_phone"
@@ -156,7 +165,7 @@
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Username container -->
+    <!-- Birthday container -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/username_container"
         android:layout_width="0dp"
@@ -167,8 +176,10 @@
         android:background="@drawable/rounded_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phone_container">
+        app:layout_constraintTop_toBottomOf="@+id/phone_container"
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:id="@+id/tv_phone2"
@@ -212,7 +223,7 @@
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Birthday container -->
+    <!-- Description container -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/birthday_container"
         android:layout_width="0dp"
@@ -223,8 +234,10 @@
         android:background="@drawable/rounded_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username_container">
+        app:layout_constraintTop_toBottomOf="@+id/username_container"
+        app:layout_constraintVertical_bias="0.0">
 
         <ImageView
             android:id="@+id/imageView5"
@@ -267,7 +280,6 @@
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Description container -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/description_container"
         android:layout_width="0dp"
@@ -278,8 +290,10 @@
         android:background="@drawable/rounded_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/birthday_container">
+        app:layout_constraintTop_toBottomOf="@+id/birthday_container"
+        app:layout_constraintVertical_bias="0.0">
 
         <Button
             android:id="@+id/btn_edit4"
@@ -291,9 +305,10 @@
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.991"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
         <ImageView
             android:id="@+id/imageView7"
@@ -304,8 +319,10 @@
             android:src="@drawable/chat_icon_2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/tv_phone4"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.21" />
 
         <TextView
             android:id="@+id/tv_phone4"
@@ -318,9 +335,10 @@
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.118" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
@@ -352,7 +370,8 @@
         android:textColor="#C8C8C8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_login"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
