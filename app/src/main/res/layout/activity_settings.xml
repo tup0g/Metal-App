@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/ProfileMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#121212"
@@ -23,6 +22,7 @@
             android:scaleType="fitXY"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/header_background" />
@@ -42,7 +42,7 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
+            android:layout_marginStart="20dp"
             android:fontFamily="@font/inter_bold"
             android:text="Metal"
             android:textColor="#FFFFFF"
@@ -55,244 +55,177 @@
             app:layout_constraintVertical_bias="0.511" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Phone container -->
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/profile_banner"
+        android:id="@+id/settings_of_language_container"
         android:layout_width="0dp"
-        android:layout_height="120dp"
-        android:background="@drawable/banner"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="596dp"
+        android:background="@drawable/rounded_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header"
         app:layout_constraintVertical_bias="0.0">
 
         <ImageView
-            android:id="@+id/profile_image"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/icon"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.076"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/tv_username"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="User"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.31"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.406" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="status"
-            android:textColor="#F0A5F0"
-            android:textSize="10sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.301"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_username"
-            app:layout_constraintVertical_bias="0.0" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <!-- Username container -->
-
-    <!-- Birthday container -->
-
-    <!-- Description container -->
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/username_container"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="408dp"
-        android:background="@drawable/rounded_background"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_banner"
-        app:layout_constraintVertical_bias="0.0">
-
-        <TextView
-            android:id="@+id/tv_phone2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginEnd="90dp"
-            android:text="username"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/imageView_chat"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginStart="12dp"
-            android:layout_marginEnd="12dp"
-            android:src="@drawable/chat_icon_7"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/tv_phone2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/btn_edit2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:text="Edit"
-            android:textAllCaps="false"
-            android:textColor="#EFB0EF"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/birthday_container"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/rounded_background"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username_container"
-        app:layout_constraintVertical_bias="0.0">
-
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="12dp"
-            android:src="@drawable/chat_icon_8"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/tv_phone3"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/tv_phone3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginEnd="90dp"
-            android:text="dateOfBirth"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/btn_edit3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:text="Edit"
-            android:textAllCaps="false"
-            android:textColor="#EFB0EF"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/description_container"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/rounded_background"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/birthday_container"
-        app:layout_constraintVertical_bias="0.0">
-
-        <Button
-            android:id="@+id/btn_edit4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:text="Edit"
-            android:textAllCaps="false"
-            android:textColor="#EFB0EF"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.991"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="12dp"
             android:src="@drawable/chat_icon_2"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/tv_phone4"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintEnd_toStartOf="@+id/tv_chat"
+            app:layout_constraintHorizontal_bias="0.285"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.21" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_phone4"
+            android:id="@+id/tv_chat"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
-            android:layout_marginEnd="90dp"
-            android:text="Description - lorem ipsum"
+            android:layout_marginEnd="50dp"
+            android:text="Chat settings"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.118" />
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/settings_of_chat_container"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="596dp"
+        android:background="@drawable/rounded_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_of_language_container"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/imageView_conf"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/chat_icon_3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_conf"
+            app:layout_constraintHorizontal_bias="0.285"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_conf"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:text="Сonfidentiality settings"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/settings_of_conf_container"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="520dp"
+        android:background="@drawable/rounded_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_of_chat_container"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/imageView_message"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/chat_icon_4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_messages"
+            app:layout_constraintHorizontal_bias="0.285"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_messages"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:text="Messages settings"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/settings_of_messages_container"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="448dp"
+        android:background="@drawable/rounded_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_of_conf_container"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/imageView_language"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/chat_icon_5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_language"
+            app:layout_constraintHorizontal_bias="0.285"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_language"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:text="Language settings"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
@@ -302,32 +235,18 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
-        android:background="@drawable/exit_background"
+        android:background="@drawable/button_background"
         android:gravity="center"
-        android:text="Logout"
-        android:textAllCaps="false"
+        android:text="Clear cache"
         android:textAlignment="center"
+        android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/description_container" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="20dp"
-        android:text="Metal for Android v11.7.3 (5696) store bundled arm64-v8a"
-        android:textAlignment="center"
-        android:textColor="#C8C8C8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_login"
+        app:layout_constraintTop_toBottomOf="@+id/settings_of_messages_container"
         app:layout_constraintVertical_bias="0.0" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
