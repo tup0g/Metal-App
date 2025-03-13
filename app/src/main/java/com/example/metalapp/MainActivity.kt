@@ -16,6 +16,7 @@ import kotlin.random.Random
 import android.widget.Toast
 import android.content.Intent
 import android.view.View
+import android.app.ActivityOptions
 
 class MainActivity : AppCompatActivity() {
 
@@ -64,7 +65,14 @@ class MainActivity : AppCompatActivity() {
                 if (phone == adminPhone && password == adminPassword) {
                     val intent = Intent(this, ProfileSettings::class.java)
                     intent.putExtra("username", adminPhone)
-                    startActivity(intent)
+
+                    val options = ActivityOptions.makeCustomAnimation(
+                        this,
+                        R.anim.slide_in_left,
+                        R.anim.slide_out_right
+                    )
+
+                    startActivity(intent, options.toBundle())
                 } else if (phone.isEmpty() || password.isEmpty()) {
                     Toast.makeText(this, "Введите номер телефона и пароль", Toast.LENGTH_SHORT).show()
                 } else {
@@ -86,6 +94,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+
 
         setRandomDescription()
 
