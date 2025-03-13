@@ -109,12 +109,19 @@ class ProfileSettings : AppCompatActivity() {
         }
 
         imageViewChats.setOnClickListener {
+            val options = ActivityOptions.makeCustomAnimation(
+                this,
+                R.anim.slide_in_left,
+                R.anim.slide_out_right
+            )
+            startActivity(Intent(this, ChatListActivity::class.java), options.toBundle())
         }
 
         imageViewProfile.setOnClickListener {
         }
 
         imageViewSettings.setOnClickListener {
+            startActivity(Intent(this, SettingsActivity::class.java))
         }
     }
 
