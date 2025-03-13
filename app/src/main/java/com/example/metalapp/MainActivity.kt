@@ -5,6 +5,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -14,6 +15,7 @@ import android.view.Gravity
 import kotlin.random.Random
 import android.widget.Toast
 import android.content.Intent
+import android.view.View
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,7 +28,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnEdit: Button
     private lateinit var tvLoginStatus: TextView
 
-    private val adminPhone = "+380000000000"
+    private val adminPhone = "admin"
     private val adminPassword = "123"
 
     private val descriptions = listOf(
@@ -61,13 +63,8 @@ class MainActivity : AppCompatActivity() {
             if (btnLogin.text == "Login") {
                 if (phone == adminPhone && password == adminPassword) {
                     val intent = Intent(this, ProfileSettings::class.java)
+                    intent.putExtra("username", adminPhone)
                     startActivity(intent)
-
-                    android.app.AlertDialog.Builder(this)
-                        .setTitle("Успех")
-                        .setMessage("Успешно зашел в аккаунт Администратора")
-                        .setPositiveButton("OK", null)
-                        .show()
                 } else if (phone.isEmpty() || password.isEmpty()) {
                     Toast.makeText(this, "Введите номер телефона и пароль", Toast.LENGTH_SHORT).show()
                 } else {
@@ -75,10 +72,16 @@ class MainActivity : AppCompatActivity() {
                 }
             } else {
                 if (phone == adminPhone) {
+                    tvLoginStatus.visibility = View.VISIBLE
+                    tvLoginStatus.setTextColor(ContextCompat.getColor(this, android.R.color.holo_red_dark))
                     tvLoginStatus.text = "Этот логин уже занят"
                 } else if (phone.isEmpty() || password.isEmpty()) {
+                    tvLoginStatus.visibility = View.VISIBLE
+                    tvLoginStatus.setTextColor(ContextCompat.getColor(this, android.R.color.holo_red_dark))
                     tvLoginStatus.text = "Заполните все поля"
                 } else {
+                    tvLoginStatus.visibility = View.VISIBLE
+                    tvLoginStatus.setTextColor(ContextCompat.getColor(this, android.R.color.holo_green_dark))
                     tvLoginStatus.text = "Пользователь успешно зарегистрирован"
                 }
             }
@@ -102,6 +105,7 @@ class MainActivity : AppCompatActivity() {
         btnLogin = findViewById(R.id.btn_login)
         btnEdit = findViewById(R.id.btn_edit)
         tvLoginStatus = findViewById(R.id.tv_login_status)
+        tvLoginStatus.visibility = View.INVISIBLE
 
         metalDescription.gravity = Gravity.CENTER_HORIZONTAL
     }

@@ -61,7 +61,7 @@
         android:layout_marginEnd="25dp"
         android:background="@drawable/password_background"
         android:hint="Login"
-        android:inputType="phone"
+        android:inputType="text"
         android:padding="12dp"
         android:textColor="#FFFFFF"
         android:textColorHint="#AAAAAA"
