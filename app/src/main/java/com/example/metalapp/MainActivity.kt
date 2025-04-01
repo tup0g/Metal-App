@@ -74,23 +74,23 @@ class MainActivity : AppCompatActivity() {
 
                     startActivity(intent, options.toBundle())
                 } else if (phone.isEmpty() || password.isEmpty()) {
-                    Toast.makeText(this, "Введите номер телефона и пароль", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Введіть номер телефону і пароль", Toast.LENGTH_SHORT).show()
                 } else {
-                    Toast.makeText(this, "Неверный логин или пароль", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Неправильний логін або пароль", Toast.LENGTH_SHORT).show()
                 }
             } else {
                 if (phone == adminPhone) {
                     tvLoginStatus.visibility = View.VISIBLE
                     tvLoginStatus.setTextColor(ContextCompat.getColor(this, android.R.color.holo_red_dark))
-                    tvLoginStatus.text = "Этот логин уже занят"
+                    tvLoginStatus.text = "Цей логін вже використовується"
                 } else if (phone.isEmpty() || password.isEmpty()) {
                     tvLoginStatus.visibility = View.VISIBLE
                     tvLoginStatus.setTextColor(ContextCompat.getColor(this, android.R.color.holo_red_dark))
-                    tvLoginStatus.text = "Заполните все поля"
+                    tvLoginStatus.text = "Заповніть всі поля"
                 } else {
                     tvLoginStatus.visibility = View.VISIBLE
                     tvLoginStatus.setTextColor(ContextCompat.getColor(this, android.R.color.holo_green_dark))
-                    tvLoginStatus.text = "Пользователь успешно зарегистрирован"
+                    tvLoginStatus.text = "Користувач успішно зареєстрований"
                 }
             }
         }
